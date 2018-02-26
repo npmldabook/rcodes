@@ -58,6 +58,7 @@ GDays<- sort(unique(HSCT$Days[!is.na(HSCT$Granu.log)]))
 lines(GDays , Fit2.Granu , col='gray40',lwd=2)
 lines(GDays , Fit.Granu  , col=1, lwd=2, lty=2) 
 
+mtext("A.", cex=1.3, side=3, line=0.7, font=2, at=-16)
 
 #-----------LYM  -------------
 plot(HSCT$Days , HSCT$LYM.log ,   main='Lymphocyte (Normal)',  col='gray50', pch=1, cex=0.8,
@@ -70,6 +71,7 @@ LDays<- sort(unique(HSCT$Days[!is.na(HSCT$LYM.log)]))
 lines(LDays , Fit2.LYM , col='gray40', lwd=2)
 lines(LDays , Fit.LYM , col=1, lwd=2, lty=2)
 
+mtext("B.", cex=1.3, side=3, line=0.7, font=2, at=-15)
 
 #-----------MON -------------
 plot(HSCT$Days , HSCT$MON.log,   main='Monocyte (Biweight)',  col='gray50', pch=1, cex=0.8,
@@ -81,6 +83,7 @@ axis(1, at=seq(-7, 28, by=7),cex.axis=1.6) ;box()
 MDays <- sort(unique(HSCT$Days[!is.na(HSCT$MON.log)]))
 lines(MDays , Fit2.MON, col='gray40', lwd=2)
 lines(MDays , Fit.MON , col=1, lwd=2, lty=2)
+mtext("C.", cex=1.3, side=3, line=0.7, font=2, at=-15)
 
 dev.off()
 

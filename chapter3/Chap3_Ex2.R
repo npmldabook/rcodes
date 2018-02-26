@@ -21,17 +21,21 @@ postscript("fig3.2.ps", horizontal=T)
 par(mar=c(4.5, 4.5, 3, 1),cex=2, mfrow=c(2, 2), pty='m', cex.lab=1.2, cex.axis=1.2, cex.main=1.2)
 
 plot(CD4 ~ Time, data=BMACS,  xlab = "Time since infection (years)", ylab = "CD4 percentage",  ylim=c(0,65), cex=0.7, col='gray50', main="Local linear: span=0.1") 
-lines(Time.int, predict(fit.linear.1 , data.frame(Time  = Time.int)),col=4, lwd=2)
+lines(Time.int, predict(fit.linear.1 , data.frame(Time  = Time.int)),col=1, lwd=2)
+mtext("A.", cex=1.3, side=3, line=0.7, font=2, at=-0.9)
 
 plot(CD4 ~ Time, data=BMACS,  xlab = "Time since infection (years)", ylab = "CD4 percentage",  ylim=c(0,65), cex=0.7, col='gray50', main="Local linear: span=0.5") 
-lines(Time.int, predict(fit.linear.5 , data.frame(Time  = Time.int)),col=4, lwd=2)
+lines(Time.int, predict(fit.linear.5 , data.frame(Time  = Time.int)),col=1, lwd=2)
+mtext("B.", cex=1.3, side=3, line=0.7, font=2, at=-0.9)
 
 
 plot(CD4 ~ Time, data=BMACS,  xlab = "Time since infection (years)", ylab = "CD4 percentage",  ylim=c(0,65), cex=0.7, col='gray50', main="Local quadratic: span=0.1") 
-lines(Time.int, predict(fit.Qr.1 , data.frame(Time  = Time.int)),col=4, lwd=2)
+lines(Time.int, predict(fit.Qr.1 , data.frame(Time  = Time.int)),col=1, lwd=2)
+mtext("C.", cex=1.3, side=3, line=0.7, font=2, at=-0.9)
 
 plot(CD4 ~ Time, data=BMACS,  xlab = "Time since infection (years)", ylab = "CD4 percentage",  ylim=c(0,65), cex=0.7, col='gray50', main="Local quadratic: span=0.5") 
-lines(Time.int, predict(fit.Qr.5 , data.frame(Time  = Time.int)),col=4, lwd=2)
+lines(Time.int, predict(fit.Qr.5 , data.frame(Time  = Time.int)),col=1, lwd=2)
+mtext("D.", cex=1.3, side=3, line=0.7, font=2, at=-0.9)
 
 dev.off()
 
