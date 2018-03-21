@@ -18,11 +18,11 @@ str(BMACS)
 attach(BMACS)
 newX <- seq(min(Time), max(Time), by=0.1)
 
-fit5  <- Spline.fit(newX, Time, CD4, nKnots=5, Degree=3)
-fit5W <- Spline.fit(newX, Time, CD4, nKnots=5, Degree=3, Wt=1/ni)
+fit5  <- spline.fit(newX, Time, CD4, nKnots=5, Degree=3)
+fit5W <- spline.fit(newX, Time, CD4, nKnots=5, Degree=3, Wt=1/ni)
 
-fit1  <- Spline.fit(newX, Time, CD4, nKnots=1, Degree=3)
-fit1W <- Spline.fit(newX, Time, CD4, nKnots=1, Degree=3, Wt=1/ni)
+fit1  <- spline.fit(newX, Time, CD4, nKnots=1, Degree=3)
+fit1W <- spline.fit(newX, Time, CD4, nKnots=1, Degree=3, Wt=1/ni)
 
 #--------------
 postscript("fig4.2.ps", horizontal=T)
@@ -43,9 +43,9 @@ mtext("B.", cex=1.5, side=3, line=0.7, font=2, at=-0.9)
 dev.off()
 #--------------
 
-fit10 <- Spline.fit(newX, Time, CD4, nKnots=10, Degree=3)
-fit15 <- Spline.fit(newX, Time, CD4, nKnots=15, Degree=3)
-fit20 <- Spline.fit(newX, Time, CD4, nKnots=20, Degree=3)
+fit10 <- spline.fit(newX, Time, CD4, nKnots=10, Degree=3)
+fit15 <- spline.fit(newX, Time, CD4, nKnots=15, Degree=3)
+fit20 <- spline.fit(newX, Time, CD4, nKnots=20, Degree=3)
 
 # Cross-validation ##
 
@@ -101,7 +101,7 @@ for (j in 1:nBoot)
     new <- BMACS[BMACS$IDD== Index.ID[i],] 
     Bootdata<- rbind( Bootdata, new)
   } 
-  BootCD4FIT[j,] <-  Spline.fit(Time.int, Bootdata$Time, Bootdata$CD4, nKnots=5, Degree=3)    
+  BootCD4FIT[j,] <-  spline.fit(Time.int, Bootdata$Time, Bootdata$CD4, nKnots=5, Degree=3)    
 }
 
 # by estimate +/- SD

@@ -44,7 +44,7 @@ Prob.S1 <- numeric(KK1)
 
 for(k in 1:KK1)
  {
-   Prob.S1[k]<-NW.WtKernel(Xvec, Yvec, S1cat[k], Bndwdth =2.6)
+   Prob.S1[k]<-NW.Kernel(Xvec, Yvec, S1cat[k], Bndwdth =2.6)
 }
 
 ## Compute the PA(x,s1,s2)##
