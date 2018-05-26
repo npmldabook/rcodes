@@ -10,7 +10,7 @@ or
 
 This repository contains R code to generate statistical results of the book.  These R code examples in different chapters provide fit to the longitudinal data using global and local smoothing methods for the conditional-mean and conditional-distribution based models.
 
-<a><img src="https://images.tandf.co.uk/common/jackets/amazon/978146651/9781466516007.jpg" /></a>
+<a><img src="https://images-na.ssl-images-amazon.com/images/I/512aNz9x16L._SX342_BO1,204,203,200_.jpg" /></a>
 
 
 [1]: https://www.amazon.com/dp/1466516003/
