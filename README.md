@@ -1,6 +1,6 @@
 # Nonparametric Models for Longitudinal Data: With Implementation in R 
 
-Materials and Rcode for "Nonparametric Models for Longitudinal Data: With Implementation in R" (Chapman & Hall/CRC Monographs on Statistics & Applied Probability).
+Materials and R code for "Nonparametric Models for Longitudinal Data: With Implementation in R" (Chapman & Hall/CRC Monographs on Statistics & Applied Probability), 2018, by Colin O. Wu and Xin Tian.
 
 [The book is available on Amazon][1]
 
