@@ -8,7 +8,9 @@ NGHS$Black <- (NGHS$RACE==2)*1
 NGHS<- NGHS[!is.na(NGHS$SBP) & !is.na(NGHS$BMIPCT) & !is.na(NGHS$HTPCT ),]      
 nrow(NGHS) #19320
 
-Ct <-   data.frame(table(NGHS$ID),  1:nrow(Ct))
+Ct <-   data.frame(table(NGHS$ID))#,  1:nrow(Ct))
+Ct <-   data.frame(Ct, 1:nrow(Ct))
+
 names(Ct)<- c('ID', 'ni','IDD')
 NGHS<- merge(NGHS, Ct, by= 'ID')
 nID<- nrow(Ct) #2376
