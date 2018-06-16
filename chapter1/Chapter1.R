@@ -3,8 +3,12 @@
 ## remove (almost) everything in the working environment.
 rm(list = ls())
 #----------------
+#install.packages("npmlda")
+library(npmlda) # install from CRAN
 
-library(npmlda)
+# Alternative or updated libary in Github
+# library(devtools)
+# install_github("npmldabook/npmlda")
 
 library(splines)
 library(lme4)
