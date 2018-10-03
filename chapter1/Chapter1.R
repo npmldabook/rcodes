@@ -7,8 +7,8 @@ rm(list = ls())
 library(npmlda) # install from CRAN
 
 # Alternative or updated libary in Github
-# library(devtools)
-# install_github("npmldabook/npmlda")
+library(devtools)
+install_github("npmldabook/npmlda")
 
 library(splines)
 library(lme4)
