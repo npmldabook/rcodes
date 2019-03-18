@@ -14,3 +14,11 @@ This repository contains R code used to generate statistical results of the book
 
 
 [1]: https://www.amazon.com/dp/1466516003/
+
+
+For package npmlda used in the book: install from CRAN  or, for a recent version, to install from GitHub:
+
+ install.packages("devtools")
+ library(devtools)
+ install_github("npmldabook/npmlda")
+ library(npmlda)
